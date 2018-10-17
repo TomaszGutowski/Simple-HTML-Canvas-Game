@@ -1,0 +1,25 @@
+// color variables //
+
+$color-white: rgba(255, 255, 255, 1);
+$color-white-opacity: rgba(255, 255, 255, 0.95);
+$color-white-lighter: rgba(255, 255, 255, 0.4);
+$color-black: rgba(0, 0, 0, 1);
+$color-black-opacity: rgba(0, 0, 0, 0.8);
+$color-gray-opacity: rgba(60, 65, 73, 0.6);
+$color-gray: rgba(60, 65, 73, 0.9);
+$color-red-opacity: rgba(215, 65, 50, 0.5);
+$color-red: rgba(215, 65, 50, 1);
+$color-purple: rgba(215, 115, 255, 1);
+$color-gold: rgba(215, 210, 186, 1);
+$color-blue: rgba(0, 45, 109, 0.95);
+$color-blue-opacity: rgba(0, 45, 109, 0.6);
+
+//border//
+
+$border-black: 1px solid $color-black;
+$border-white: 2px solid $color-white-opacity;
+
+
+//fonts variables//
+
+$open-sans: 'Open Sans Condensed', sans-serif;

@@ -1,0 +1,1054 @@
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*=================================================================*/
+/*============================ MAIN STYLES ========================*/
+/*=================================================================*/
+#list-mobile, #nav-list, #offer-list, #price-list {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  line-height: 2em; }
+
+#nav-list li {
+  display: inline-block;
+  text-align: center;
+  width: 4.8em;
+  font-size: 1.5em;
+  padding-bottom: 0.4em; }
+
+#offer-list li, #price-list li {
+  display: block;
+  font-size: 0.7em;
+  width: 100%;
+  padding-top: 0.3em;
+  line-height: 1.6em;
+  text-align: center;
+  background-color: white; }
+
+#index-tel, #kontakt-adress #contact-tel, #index-mail, #kontakt-adress #contact-mail, #head-wrapper a, #list-mobile li > a, #nav-list li a, #offer-section a, #price-section a {
+  cursor: pointer;
+  text-decoration: none; }
+
+#nav-list li:hover {
+  background: rgba(60, 65, 73, 0.9);
+  background: -webkit-linear-gradient(top, rgba(60, 65, 73, 0.9), white);
+  background: linear-gradient(to bottom, rgba(60, 65, 73, 0.9), white);
+  -webkit-box-shadow: inset 1px 1px 1px white;
+  -moz-box-shadow: inset 1px 1px 1px white;
+  box-shadow: inset 1px 1px 1px white;
+  transform: scale(1.05);
+  cursor: pointer; }
+
+main {
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.95); }
+
+#index-map, #contact-map {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 320px;
+  min-width: 300px; }
+
+#contact-form label {
+  padding: 0 0 0 0.5em;
+  text-align: center;
+  min-width: 100px;
+  max-width: 150px; }
+
+#contact-form input, #contact-form textarea, #contact-form #submit {
+  box-sizing: border-box;
+  display: block;
+  padding: 0.4em;
+  margin: 0.1em;
+  background-color: white;
+  border: 1px solid rgba(0, 45, 109, 0.95);
+  border-radius: 30px; }
+  #contact-form input:focus, #contact-form textarea:focus, #contact-form #submit:focus {
+    border: 3px groove rgba(0, 45, 109, 0.95); }
+
+#about-section, #offer-section, #price-section, #reference-section, #contact-section, #map-section, #offer-tax, #offer-zus, #offer-kadry, #price-individual, #price-company {
+  width: 100%;
+  overflow: hidden; }
+
+#tax-img, #zus-img, #pit-img {
+  width: 90%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 1em;
+  overflow: hidden;
+  font-size: bold; }
+
+#price-img-left, #price-img-right {
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 1em;
+  overflow: hidden;
+  font-size: bold; }
+
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo6 {
+  width: 90%;
+  height: 150px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.tax-img-blur {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.95));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.95));
+  opacity: 0.8; }
+
+#about-section h2, #offer-section h2, #price-section h2, #reference-section h2, #price-individual h2, #price-company h2 {
+  text-align: center;
+  padding: 1em 2em 0 2em; }
+
+.tax-img-blur h2, #price-img-right h2 {
+  text-align: center center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: normal;
+  font-size: 1.8em;
+  text-shadow: 0 0 8px black; }
+
+#kontakt-adress h2, #form-part h2 {
+  text-align: center;
+  font-style: normal;
+  padding: 0.3em 0 0 0.5em; }
+
+#offer-tax h2, #offer-zus h2, #offer-kadry h2 {
+  text-align: center;
+  font-size: 1.2em;
+  min-width: 15%;
+  padding: 0.75em 0.5em 0 1em; }
+
+#about-section p, #offer-section p, #price-section p, #reference-section p, #price-individual p, #price-company p {
+  text-align: justify;
+  padding: 1em 2em; }
+
+#menu-text p {
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  color: white; }
+
+.tax-img-blur p, #price-img-left p {
+  margin: auto auto;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  color: inherit; }
+
+#offer-tax p, #offer-zus p, #offer-kadry p {
+  text-align: justify;
+  padding: 1em 2em 1em 1em; }
+
+#index-tel, #kontakt-adress #contact-tel {
+  font-style: normal;
+  font-size: 1.5em; }
+
+#index-mail, #kontakt-adress #contact-mail {
+  width: 70%;
+  padding: 0.7em 0;
+  font-style: normal;
+  font-size: 1.1em;
+  color: inherit; }
+
+@media (max-width: 767px) and (min-width: 200px) {
+  #mobile-menu {
+    display: flex; }
+
+  #nav-list {
+    display: none; }
+
+  .div-flex {
+    flex: 0 1 100%; }
+
+  footer {
+    padding-bottom: 1.2em; }
+
+  .offer-div {
+    display: inline-block; }
+
+  #offerSection p {
+    margin-top: 0; }
+
+  #price-img-right,
+  #price-img-left {
+    width: 90%;
+    height: 150px; }
+
+  #reference-wrapper {
+    display: none; }
+
+  #index-map {
+    display: none; }
+
+  #form-flex {
+    display: none; }
+
+  #kontakt-adress p {
+    text-align: center; } }
+@media (min-width: 768px) {
+  #mobile-menu {
+    display: flex; }
+
+  #nav-list {
+    display: none; }
+
+  .div-flex {
+    flex: 0 1 100%; }
+
+  .offer-div {
+    display: flex; }
+
+  #offerSection p {
+    margin-top: 0; }
+
+  #price-img-right,
+  #price-img-left {
+    width: 90%;
+    height: 150px; }
+
+  #referenceSection p {
+    padding-bottom: 10%;
+    margin-bottom: 0; }
+
+  #index-map {
+    display: flex; }
+
+  #form-flex {
+    display: flex; }
+
+  #kontakt-adress p {
+    text-align: center; }
+
+  #contact-form {
+    min-width: 500px; }
+
+  #contact-section h2 {
+    margin-top: 2.5em; } }
+@media (min-width: 900px) {
+  #mobile-menu {
+    display: none; }
+
+  #nav-list {
+    display: flex; }
+
+  .div-flex {
+    flex: 0 1 50%;
+    min-width: 380px; }
+
+  footer {
+    padding-bottom: 0; }
+
+  #offerSection p {
+    margin-top: 20%; }
+
+  #referenceSection p {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+  #kontakt-adress p {
+    text-align: left; }
+
+  #contact-form {
+    min-width: 380px; }
+
+  #contact-section h2 {
+    margin-top: 1.2em; } }
+header {
+  width: 95%;
+  height: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bolder; }
+
+#head-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 65, 73, 0.6);
+  background: -webkit-linear-gradient(top, rgba(60, 65, 73, 0.6), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to bottom, rgba(60, 65, 73, 0.6), rgba(255, 255, 255, 0.4));
+  margin: 0.45em 0;
+  overflow: hidden; }
+
+#logo {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/optymal-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#main-nav {
+  width: 100%;
+  height: 3.1em;
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 45, 109, 0.95); }
+
+.main-nav-expanded {
+  min-height: 12em; }
+
+#mobile-menu {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-basis: auto; }
+  #mobile-menu #mobile-menu {
+    display: flex; }
+  #mobile-menu #mobile-menu {
+    display: none; }
+
+#menu-text {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+  #menu-text p {
+    padding: 0.2em 0 0 30%;
+    cursor: pointer; }
+    #menu-text p:hover {
+      text-shadow: 1px 1px; }
+
+#mobile-list {
+  width: 50%;
+  height: 100%;
+  display: none; }
+
+#list-mobile {
+  padding-top: 0.1em;
+  margin-right: 30%; }
+  #list-mobile li {
+    font-size: 1.2em;
+    padding-top: 0.2em; }
+    #list-mobile li:hover {
+      transform: scale(1.1); }
+    #list-mobile li > a {
+      color: white; }
+      #list-mobile li > a:hover {
+        text-shadow: 1px 1px; }
+
+#nav-list #nav-list {
+  display: none; }
+#nav-list #nav-list {
+  display: flex; }
+#nav-list li {
+  padding-top: 0.3em; }
+  #nav-list li:hover > a {
+    color: rgba(0, 45, 109, 0.95); }
+  #nav-list li ul {
+    visibility: none;
+    transform: scaleY(0);
+    transform-origin: 50% 30%;
+    transition: 150ms; }
+  #nav-list li:hover > ul {
+    visibility: visible;
+    transform: scaleY(1);
+    padding-top: 0.3em;
+    display: block;
+    position: relative;
+    font-weight: normal; }
+  #nav-list li a {
+    color: white; }
+
+#offer-list, #price-list {
+  flex-direction: column; }
+  #offer-list li, #price-list li {
+    padding-top: 0.5em; }
+    #offer-list li:hover > a, #price-list li:hover > a {
+      color: white; }
+    #offer-list li a, #price-list li a {
+      color: black; }
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 94.6%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  word-break: break-all;
+  text-align: center;
+  margin-bottom: 0.5em;
+  background-color: rgba(0, 45, 109, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  color: white; }
+  footer footer {
+    padding-bottom: 1.2em; }
+  footer footer {
+    padding-bottom: 0; }
+  footer h2 {
+    padding: 0.6em 0 0.5em 0;
+    font-style: normal; }
+  footer p {
+    font-style: normal; }
+
+#index-mail {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+  #index-mail:hover {
+    color: rgba(215, 65, 50, 0.5); }
+
+#index-tel {
+  font-weight: bold;
+  color: white;
+  padding: 1em; }
+
+#index-map {
+  width: 90%;
+  padding: 1.3em 0; }
+  #index-map #index-map {
+    display: none; }
+  #index-map #index-map {
+    display: flex; }
+
+.tax-img-blur:hover {
+  transition: 0.25s ease ease-in-out;
+  opacity: 1;
+  transform: scale(1.2);
+  color: rgba(0, 45, 109, 0.95); }
+
+.about-section-margin {
+  margin-top: 13em !important; }
+
+#offer-section #offerSection p {
+  margin-top: 0; }
+#offer-section #offerSection p {
+  margin-top: 20%; }
+#offer-section a {
+  color: black; }
+
+#tax-img {
+  background-image: url("../images/tax1.jpg"); }
+
+#zus-img {
+  background-image: url("../images/bookkeep2.jpg"); }
+
+#pit-img {
+  background-image: url("../images/bookkeep3.jpg"); }
+
+#price-section {
+  padding-bottom: 2em;
+  justify-content: space-around; }
+  #price-section a {
+    color: black; }
+
+#price-img-left {
+  background-image: url("../images/calc.png"); }
+  #price-img-left #price-img-right,
+  #price-img-left #price-img-left {
+    width: 90%;
+    height: 150px; }
+
+#price-img-right {
+  background-image: url("../images/calc.png"); }
+  #price-img-right #price-img-right,
+  #price-img-right #price-img-left {
+    width: 90%;
+    height: 150px; }
+
+#reference-section {
+  padding-bottom: 0; }
+  #reference-section #referenceSection p {
+    padding-bottom: 10%;
+    margin-bottom: 0; }
+  #reference-section #referenceSection p {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  #reference-section h2 {
+    padding-bottom: 1em; }
+
+#reference-wrapper {
+  width: 90%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 0; }
+
+#photo1 {
+  background-image: url("../images/calc.png"); }
+
+#photo2 {
+  background-image: url("../images/tax1.jpg"); }
+
+#photo3 {
+  background-image: url("../images/tax2.jpg"); }
+
+#photo4 {
+  background-image: url("../images/bookeep1.jpg"); }
+
+#photo5 {
+  background-image: url("../images/bookkeep2.jpg"); }
+
+#photo6 {
+  background-image: url("../images/bookkeep3.jpg"); }
+
+main {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+#adress-part,
+#form-part {
+  padding: 0 1.5em 0 1.5em;
+  width: auto; }
+
+#kontakt-adress h2 {
+  margin-bottom: 1em; }
+  #kontakt-adress h2 #contact-section h2 {
+    margin-top: 2.5em; }
+  #kontakt-adress h2 #contact-section h2 {
+    margin-top: 1.2em; }
+#kontakt-adress p {
+  font-style: normal;
+  word-wrap: break-word;
+  padding: 0 2.5em 0 2em; }
+  #kontakt-adress p #kontakt-adress p {
+    text-align: left; }
+  #kontakt-adress p #kontakt-adress p {
+    text-align: center; }
+#kontakt-adress span {
+  font-weight: bold;
+  margin-right: 0.3em; }
+#kontakt-adress #contact-mail {
+  width: auto;
+  display: inline-block; }
+  #kontakt-adress #contact-mail:hover {
+    text-shadow: 1px 1px 1px; }
+#kontakt-adress #contact-tel {
+  color: black;
+  display: inline-block;
+  margin-top: 0; }
+
+#form-part {
+  margin-left: auto;
+  margin-right: auto; }
+  #form-part #form-flex {
+    display: none; }
+  #form-part #form-flex {
+    display: flex; }
+  #form-part h2 #contact-section h2 {
+    margin-top: 2.5em; }
+  #form-part h2 #contact-section h2 {
+    margin-top: 1.2em; }
+
+#contact-form {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block; }
+  #contact-form #contact-form {
+    min-width: 500px; }
+  #contact-form #contact-form {
+    min-width: 380px; }
+  #contact-form ::placeholder {
+    font-style: italic;
+    color: rgba(0, 45, 109, 0.6); }
+  #contact-form input {
+    width: 60%;
+    height: 2em; }
+  #contact-form textarea {
+    width: 100%;
+    height: 6em;
+    margin: 0; }
+  #contact-form #submit {
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.95);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.95);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.95);
+    width: 20%;
+    height: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+    margin-top: 0.5em;
+    padding-bottom: 0.4em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 45, 109, 0.95);
+    color: white; }
+    #contact-form #submit:active {
+      -webkit-box-shadow: 2px 2px 2px rgba(0, 45, 109, 0.95);
+      -moz-box-shadow: 2px 2px 2px rgba(0, 45, 109, 0.95);
+      box-shadow: 2px 2px 2px rgba(0, 45, 109, 0.95);
+      color: rgba(255, 255, 255, 0.95); }
+
+.form input[type=text].error,
+.form input[type=email].error,
+.form textarea.error,
+.form input.error ~ .state {
+  border-color: #d74132; }
+
+#map-section {
+  margin-top: 4em;
+  padding-bottom: 1em;
+  min-height: 20em; }
+
+#contact-map {
+  width: 100%;
+  height: 25em; }
+
+main #h2 {
+  width: 100%;
+  text-align: center;
+  padding: 1.5em 0.5em 0 0.5em; }
+
+.offer-div {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 0 1em 0; }
+  .offer-div .offer-div {
+    display: inline-block; }
+  .offer-div .offer-div {
+    display: flex; }
+
+.offer-span {
+  display: block;
+  padding: 1em 1em 0 1em; }
+
+#offer-tax #end {
+  display: inline-block;
+  padding-top: 1.5em; }
+
+#offer-kadry {
+  padding-bottom: 3em; }
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bookkeep2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: black;
+  cursor: default; }
+
+#progress-bar {
+  width: 100%;
+  height: 1%;
+  background-color: rgba(60, 65, 73, 0.6);
+  top: 0;
+  position: fixed; }
+
+#progress {
+  width: 5%;
+  height: 100%;
+  background-color: rgba(0, 45, 109, 0.6);
+  position: relative; }
+
+#go-top {
+  width: 75px;
+  height: 75px;
+  background-image: url("../images/up.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 2.5%;
+  bottom: 59%;
+  opacity: 0.7;
+  transition: all 0.5s ease-in-out;
+  z-index: 99999; }
+  #go-top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 999999; }
+
+.div-flex {
+  overflow: hidden; }
+  .div-flex .div-flex {
+    flex: 0 1 100%; }
+  .div-flex .div-flex {
+    flex: 0 1 50%;
+    min-width: 380px; }
+
+.section-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+/*# sourceMappingURL=main.css.map */

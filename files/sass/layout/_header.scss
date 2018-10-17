@@ -1,0 +1,157 @@
+header{
+    @include width-height(95%, 6em);
+    @include center;
+    font-weight: bolder;
+}
+
+#head-wrapper{
+    @include width-height(100%, 100%);
+    @include gradient($color-gray-opacity, $color-white-lighter, vertical);
+    margin: 0.45em 0;
+    overflow: hidden;
+    
+    a{
+        @extend %a-setter;
+    }
+}
+
+
+#logo{
+    @include width-height(100%, 100%);
+    background-image: url("../images/optymal-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+//website menu start//
+
+#main-nav{
+    @include width-height (100%, 3.1em);
+    box-sizing: border-box;
+    text-align: center;
+    border: $border-white;
+    background-color: $color-blue;
+}
+
+.main-nav-expanded{
+    min-height: 12em;
+}
+
+//mobile menu start -showed up on tablet screen//
+
+#mobile-menu{
+    @include width-height;
+    @include tablet-mobile-menu;
+    @include desktop-mobile-menu;
+    flex-direction: row;
+    flex-basis: auto;
+}
+
+#menu-text{
+    @include width-height(50%, 100%);
+    @include margin-padding;
+    
+    p{
+        @extend %p-menu;
+        padding: 0.2em 0 0 30%;
+        cursor: pointer;
+        
+        &:hover{
+            @include text-shadow;
+        }
+    }
+}
+
+#mobile-list{
+    @include width-height(50%, 100%);
+    display: none;
+}
+
+
+#list-mobile{
+    
+    @extend %nav-list;
+    padding-top: 0.1em;
+    margin-right: 30%;
+    
+    li{
+        font-size: 1.2em;
+        padding-top: 0.2em;
+        
+        &:hover{
+         transform: scale(1.1);
+        }
+        
+            &>a{
+            @extend %a-setter;
+            color: $color-white;
+
+                &:hover{
+                    @include text-shadow;
+                }
+        }
+    }
+}
+
+//mobile menu end//
+
+#nav-list{
+    @extend %nav-list;
+    @include tablet-nav-list;
+    @include desktop-nav-list;
+    
+    li{
+        @extend %li-horizontal;
+        padding-top: 0.3em;
+       
+        &:hover{
+                @extend %link-active;
+            
+            &>a{
+                color: $color-blue;
+            }
+        }
+        
+        ul{
+            visibility: none;
+            transform: scaleY(0);
+            transform-origin: 50% 30%;
+            transition: 150ms;
+        }
+        
+        &:hover>ul{
+            visibility: visible;
+            transform: scaleY(1);
+            padding-top: 0.3em;
+            display: block;
+            position: relative;
+            font-weight: normal;
+        }
+        
+        a{
+            @extend %a-setter;
+            color: $color-white;
+        }
+    }
+}
+
+#offer-list, #price-list{
+    @extend %nav-list;
+    flex-direction: column;
+   
+    li{
+        @extend %li-vertical;
+        padding-top: 0.5em;
+        
+        &:hover>a{
+            color: $color-white;
+        }
+        a{
+            color: $color-black;
+        }
+    }
+}
+
+//website menu end//

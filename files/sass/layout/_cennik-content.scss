@@ -1,0 +1,29 @@
+//cennik site content//
+
+main{
+    @extend %main;
+}
+
+#price-individual{
+    @extend %section;
+    
+    h2{
+        @extend %h2;
+    }
+    
+    p{
+        @extend %p;
+    }
+}
+
+#price-company{
+    @extend %section;
+    
+    h2{
+        @extend %h2;
+    }
+    
+    p{
+        @extend %p;
+    }
+}

@@ -1,0 +1,199 @@
+
+//list stylers//
+
+%nav-list{
+    @include width-height;
+    @include margin-padding;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    line-height: 2em;
+}
+
+%li-horizontal{
+    display: inline-block;
+    text-align: center;
+    width: 4.8em;
+    font-size: 1.5em;
+    padding-bottom: 0.4em;  
+}
+
+%li-vertical{
+    display: block;
+    font-size: 0.7em;
+    width: 100%;
+    padding-top: 0.3em;
+    line-height: 1.6em;
+    text-align: center;
+    background-color: $color-white;
+}
+
+%li-main{
+    display: block;
+    text-align: center;
+}
+
+//link stylers//
+
+%a-setter{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+%link-active{
+    @include gradient($color-gray, $color-white, vertical);
+    @include box-shadow(1px, 1px, 1px, $color-white, true);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+//website content stylers//
+
+%main{
+    @include width-height(95%, 100%);
+    @include center;
+    background-color: $color-white-opacity;
+}
+
+%iframe{
+    @include center;
+    min-height: 320px;
+    min-width: 300px;
+}
+
+%label{
+    padding: 0 0 0 0.5em;
+    text-align: center;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+
+%contact-field{
+    box-sizing: border-box;
+    display: block;
+    padding: 0.4em;
+    margin: 0.1em;
+    background-color: $color-white;
+    border: 1px solid $color-blue;
+    border-radius: 30px;
+    
+    &:focus{
+        border: 3px groove $color-blue;
+    }
+}
+
+//section stylers//
+
+%section{
+    width: 100%;
+    overflow: hidden;
+}
+
+%section-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+//image stylers//
+
+%offer-image{
+    @include width-height(90%, 150px);
+    @include center;
+    @include background-size;
+    margin-top: 1em;
+    overflow: hidden;
+    font-size: bold;
+}
+
+%price-image{
+    @include center;
+    @include background-size;
+    margin-top: 1em;
+    overflow: hidden;
+    font-size: bold;
+}
+
+%carousel-image{
+    @include width-height(90%, 150px);
+    @include background-size;
+}
+
+%img-blur{
+    @include width-height;
+    @include gradient($color-white-lighter, $color-white-opacity, horizontal);
+    opacity: 0.8;
+}
+
+
+//text-stylers//
+
+%h2{
+    text-align: center;
+    padding: 1em 2em 0 2em;
+}
+
+%h2-image{
+    text-align: center center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: normal;
+    font-size: 1.8em;
+    text-shadow: 0 0 8px $color-black;
+}
+
+%h2-contact{
+        text-align: center;
+        font-style: normal;
+        padding: 0.3em 0 0 0.5em;
+}
+
+%h2-offer{
+    text-align: center;
+    font-size: 1.2em;
+    min-width: 15%;
+    padding: 0.75em 0.5em 0 1em;
+}
+
+%p{
+    text-align: justify;
+    padding: 1em 2em;
+}
+
+%p-menu{
+    @include width-height(20%, 100%);
+    @include margin-padding(0, 0.3em);
+    font-size: 1.5em;
+    color: $color-white;
+}
+
+%p-image{
+    margin: auto auto;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: inherit;
+}
+
+%p-offer{
+    text-align: justify;
+    padding: 1em 2em 1em 1em;
+}
+
+%tel{
+    @extend %a-setter;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+%mail{
+    @extend %a-setter;
+    width: 70%;
+    padding: 0.7em 0;
+    font-style: normal;
+    font-size: 1.1em;
+    color: inherit;
+}

@@ -1,0 +1,50 @@
+footer{
+    @include center;
+    @include cell-footer-padding;
+    @include desktop-footer-padding;
+    overflow: hidden;
+    width: 94.6%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    word-break: break-all;
+    text-align: center;
+    margin-bottom: 0.5em;
+    background-color: $color-blue;
+    border: $border-white;
+    color: $color-white;
+        
+    h2{
+        padding: 0.6em 0 0.5em 0;
+        font-style: normal;
+    }
+    
+    p{
+        font-style: normal;
+    }
+}
+
+#index-mail{
+    @extend %mail;
+    @include center;
+    display: block; 
+    
+    &:hover{
+        color: $color-red-opacity;
+    }
+}
+    
+#index-tel{
+    @extend %tel;
+    font-weight: bold;
+    color: $color-white;
+    padding: 1em;
+}
+
+#index-map{
+    @extend %iframe;
+    width: 90%;
+    @include cell-map;
+    @include tablet-map;
+    padding: 1.3em 0;
+}

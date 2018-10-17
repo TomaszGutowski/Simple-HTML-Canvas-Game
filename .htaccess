@@ -1,0 +1,30 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+Options All -Indexes
+
+#rewrite rules start
+RewriteEngine on
+
+# www -> without www
+RewriteCond %{HTTP_HOST} ^www.brp-optymal.pl$ [NC]
+RewriteRule ^(.*)$ http://brp-optymal.pl/$1 [R=301,L]
+# without www -> www
+RewriteCond %{HTTP_HOST} !^www.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+#aliases on index
+RewriteRule optymal-ksiegowosc index.html
+RewriteRule optymal-ksiegowosc index.html#about-section
+RewriteRule optymal-ksiegowosc index.html#reference-section
+#aliases on price
+RewriteRule optymal-cennik-biura-rachunkowego cennik.html#price-company
+RewriteRule optymal-cennik-biura-rachunkowego cennik.html#price-individual
+#aliases on offer
+RewriteRule optymal-oferta oferta.html
+RewriteRule optymal-oferta-ksiegowosc oferta.html#offer-tax
+RewriteRule optymal-oferta-kadry oferta.html#offer-zus
+RewriteRule optymal-oferta-pozostale oferta.html#offer-kadry
+#aliases on kontakt
+RewriteRule optymal-kontakt kontakt.html

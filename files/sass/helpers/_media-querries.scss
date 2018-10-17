@@ -1,0 +1,57 @@
+//General media querries file for responsive layout//
+
+//cell//
+
+@media (max-width: 767px) and (min-width: 200px){
+//common mixins//
+    @include tablet-mobile-menu;
+    @include tablet-nav-list;
+    @include tablet-flex-div;
+    @include cell-footer-padding;
+    @include cell-offer-div;
+//index page//
+    @include tablet-para-offer;
+    @include tablet-price;
+    @include tablet-owl-carousel;
+    @include cell-map;
+//kontakt page//
+    @include cell-form-part;
+    @include tablet-para-adress;
+}
+
+//tablet//
+
+@media (min-width: 768px){
+//common mixins//
+    @include tablet-mobile-menu;
+    @include tablet-nav-list;
+    @include tablet-flex-div;
+    @include tablet-offer-div;
+//index page//
+    @include tablet-para-offer;
+    @include tablet-price;
+    @include tablet-para-reference;
+    @include tablet-map;
+//kontakt page//
+    @include tablet-form-part;
+    @include tablet-para-adress;
+    @include tablet-contact-form;
+    @include tablet-contact-section-h2;
+}
+
+//desktop//
+
+@media (min-width: 900px){
+//common mixins//
+    @include desktop-mobile-menu;
+    @include desktop-nav-list;
+    @include desktop-flex-div;
+    @include desktop-footer-padding;
+//index page//
+    @include desktop-para-offer;
+    @include desktop-para-reference;
+//kontakt page//
+    @include desktop-para-adress;
+    @include desktop-contact-form;
+    @include desktop-contact-section-h2;
+}

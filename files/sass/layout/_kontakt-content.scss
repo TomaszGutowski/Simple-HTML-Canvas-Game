@@ -1,0 +1,152 @@
+////kontakt site content////
+
+main{
+    @extend %main;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+//contact section start//
+
+#contact-section{
+    @extend %section;
+}
+
+//contact details part//
+
+#adress-part,
+#form-part{
+    padding: 0 1.5em 0 1.5em;
+    width: auto;
+}
+
+#kontakt-adress{
+    
+    h2{
+        @extend %h2-contact;
+        @include tablet-contact-section-h2;
+        @include desktop-contact-section-h2;
+        margin-bottom: 1em;
+        
+    }
+    
+    p{
+        @include desktop-para-adress;
+        @include tablet-para-adress;
+        font-style: normal;
+        word-wrap: break-word;
+        padding: 0 2.5em 0 2em;
+    }
+    
+    span{
+        font-weight: bold;
+        margin-right: 0.3em;
+    }
+    
+    #contact-mail{
+        @extend %mail;
+        width: auto;
+        display: inline-block;
+    
+        &:hover{
+            text-shadow: 1px 1px 1px;
+        }
+    }
+
+    #contact-tel{
+        @extend %tel;
+        color: $color-black;
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+//contact form part//
+
+#form-part{
+    
+    @include cell-form-part;
+    @include tablet-form-part;
+    @include center;
+    
+    h2{
+        @extend %h2-contact;
+        @include tablet-contact-section-h2;
+        @include desktop-contact-section-h2;
+    }
+}
+    
+#contact-form{
+    @include width-height(100%, 100%);
+    @include center;
+    @include tablet-contact-form;
+    @include desktop-contact-form;
+    display: inline-block;
+        
+    ::placeholder{
+        font-style: italic;
+        color: $color-blue-opacity;
+    }
+        
+    label{
+        @extend %label;
+    }
+        
+    input{
+        @extend %contact-field;
+        @include width-height(60%, 2em);
+    }
+        
+    textarea{
+        @extend %contact-field;
+        @include width-height(100%, 6em);
+        margin: 0;
+    }
+        
+    #submit{
+        @extend %contact-field;
+        @include box-shadow(2px, 2px, 2px, $color-white-opacity, true);
+        @include width-height(20%, 2.5em);
+        @include center;
+        min-width: 200px;
+        margin-top: 0.5em;
+        padding-bottom: 0.4em;
+        font-weight: bold;
+        text-align: center;
+        background-color: $color-blue;
+        color: $color-white;
+            
+        &:active{
+            @include box-shadow(2px, 2px, 2px, $color-blue, false);
+            color: $color-white-opacity;
+        }
+    }
+}
+
+.form input[type=text].error,
+.form input[type=email].error,
+.form textarea.error,
+.form input.error ~ .state {
+    border-color:$color-red;
+}
+
+//contact section end//
+
+//map section start//
+
+#map-section{
+    @extend %section;
+    margin-top: 4em;
+    padding-bottom: 1em;
+    min-height: 20em;
+}
+
+#contact-map{
+    @extend %iframe;
+    @include width-height(100%, 25em);
+}
+
+
+//map section end//

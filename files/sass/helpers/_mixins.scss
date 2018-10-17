@@ -1,0 +1,343 @@
+/////////////////////////////////////////////////////////////
+//responsive design mixins - called in media-querries.scss//
+////////////////////////////////////////////////////////////
+
+////mixins for common elements////
+
+//mobile menu//
+
+@mixin tablet-mobile-menu{
+    
+    #mobile-menu{
+    display: flex;
+    }
+}
+
+@mixin desktop-mobile-menu{
+    
+    #mobile-menu{
+    display: none;
+    }
+}
+
+
+//main nav items//
+
+@mixin tablet-nav-list(){
+    #nav-list{
+        display: none;
+    }
+}
+
+@mixin desktop-nav-list(){
+    #nav-list{
+        display: flex;
+    }
+}
+
+//div-flex in sections//
+
+@mixin tablet-flex-div(){
+    
+    .div-flex{
+    flex: 0 1 100%;
+    }
+    
+}
+
+@mixin desktop-flex-div(){
+   
+    .div-flex{
+    flex: 0 1 50%;
+    min-width: 380px;
+}
+    
+}
+
+//offer div in offer site
+
+@mixin cell-offer-div{
+    
+    .offer-div{
+        display: inline-block;
+    }
+}
+
+@mixin tablet-offer-div{
+    
+     .offer-div{
+        display: flex;
+    }
+}
+
+////end of common elements mixins////
+
+////start index mixins////
+
+////mixins for offer section////
+
+//paragraph in offer section//
+
+@mixin tablet-para-offer(){
+    
+     #offerSection{
+        p{
+            margin-top: 0;
+        }
+    }
+    
+}
+
+@mixin desktop-para-offer(){
+    
+      #offerSection{
+        p{
+            margin-top: 20%;
+        }
+    }
+    
+}
+
+////mixins for price section////
+
+//images in price section//
+
+@mixin tablet-price-left(){
+    
+    #price-img-left{
+    width: 90%;
+    height: 150px;
+    }
+    
+}
+
+@mixin tablet-price(){
+    
+    #price-img-right,
+    #price-img-left{
+    width: 90%;
+    height: 150px;
+    }
+}
+
+////mixins for reference section////
+
+//owl carousel in reference section//
+
+@mixin tablet-owl-carousel(){
+    #reference-wrapper{
+        display: none;
+    }
+}
+
+@mixin desktop-owl-carousel(){
+    #reference-wrapper{
+        display: flex;
+    }
+}
+
+//paragraph in reference section//
+
+@mixin tablet-para-reference(){
+    #referenceSection{
+        
+        p{
+            padding-bottom: 10%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin desktop-para-reference(){
+     #referenceSection{
+        
+        p{
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+//map in footer//
+
+@mixin cell-map(){
+    #index-map{
+        display: none;
+    }
+}
+
+@mixin tablet-map(){
+    #index-map{
+        display: flex;
+    }
+}
+
+//footer margin-bottom
+
+@mixin cell-footer-padding(){
+    footer{
+        padding-bottom: 1.2em;
+    }
+}
+
+@mixin desktop-footer-padding(){
+    footer{
+        padding-bottom: 0;
+    }
+}
+
+////end of index page mixins////
+
+///start of kontakt page mixins///
+
+//contact section h2//
+
+@mixin tablet-contact-section-h2{
+    #contact-section{
+        h2{
+            margin-top: 2.5em;
+        }
+    }
+}
+
+@mixin desktop-contact-section-h2{
+    #contact-section{
+        h2{
+            margin-top: 1.2em;
+        }
+    }
+}
+
+//form part//
+
+@mixin cell-form-part{
+    
+    #form-flex{
+    display: none;
+    }
+}
+
+@mixin tablet-form-part{
+    
+    #form-flex{
+    display: flex;
+    }
+}
+
+//contact form//
+
+@mixin tablet-contact-form{
+    #contact-form{
+        min-width: 500px;
+    }
+}
+
+
+@mixin desktop-contact-form{
+    #contact-form{
+        min-width: 380px;
+    }
+}
+
+//paragraph in adress//
+
+@mixin desktop-para-adress{
+    
+    #kontakt-adress{
+        p{
+            text-align: left;
+        }
+    }
+    
+}
+
+@mixin tablet-para-adress{
+    
+    #kontakt-adress{
+        
+        p{
+            text-align: center;
+        }
+    }
+    
+}
+
+///////////////////////////////////////////////////////
+//////////End of respomsive design mixins/////////////
+//////////////////////////////////////////////////////
+
+//width and height mixin//
+
+@mixin width-height($w:100%, $h:100%){
+    width: $w;
+    height: $h;
+}
+
+
+//padding and margin reset//
+
+@mixin margin-padding($m:0, $p:0){
+    margin: 0;
+    padding: 0;
+}
+
+//center mixin//
+
+@mixin center($ml:auto, $mr:auto){
+    margin-left: $ml;
+    margin-right: $mr;
+}
+
+//shadows//
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin text-shadow($hor:1px, $ver:1px){
+    text-shadow: $hor $ver;
+}
+
+//gradients//
+
+@mixin gradient($start-color, $end-color, $orientation){
+  background: $start-color;
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+@mixin gradient-45($color:$color-white){
+    background-image: linear-gradient(45deg,$color 25%,transparent 25%,transparent 50%,$color 50%,$color 75%,transparent 75%,transparent);
+}
+
+//background for images//
+
+@mixin background-size($bs:cover, $bp:center center, $br:no-repeat){
+    background-size: $bs;
+    background-position: $bp;
+    background-repeat: $br;
+}
+
+
+//transition mixin//
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out){
+    transition: $what $time $how;
+}

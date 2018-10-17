@@ -1,0 +1,93 @@
+//normalization//
+
+@import "base/normalize"; 
+
+/*=================================================================*/
+/*============================ MAIN STYLES ========================*/
+/*=================================================================*/
+
+//main components//
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/place-holders";
+@import "helpers/media-querries";
+
+
+//layout//
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/index-content";
+@import "layout/kontakt-content";
+@import "layout/oferta-content";
+@import "layout/cennik-content";
+
+//common set-ups//
+
+body{
+    @include width-height(100%, 100%);
+    background-image: url("../images/bookkeep2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: $open-sans;
+    font-weight: normal;
+    font-size: 20px;
+    color: $color-black;
+    cursor: default;
+}
+
+//loading bar before header//
+
+#progress-bar{
+    @include width-height(100%, 1%);
+    background-color: $color-gray-opacity;
+    top: 0;
+    position: fixed;
+    
+}
+
+#progress{
+    @include width-height(5%, 100%);
+    background-color: $color-blue-opacity;
+    position: relative;
+}
+
+//Go top button below reference section//
+
+#go-top{
+    @include width-height(75px, 75px);
+    background-image: url("../images/up.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 2.5%;
+    bottom: 59%;
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+    z-index: 99999;
+    
+    &:hover{
+        opacity: 1;
+        transform: scale(1.1);
+        cursor: pointer;
+        z-index: 999999;
+    }
+}
+
+
+//all sites common classes//
+
+.div-flex{
+    @include tablet-flex-div;
+    @include desktop-flex-div;
+    overflow: hidden;
+}
+
+.section-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

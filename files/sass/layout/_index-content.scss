@@ -1,0 +1,175 @@
+////index site content////
+
+.tax-img-blur{
+    @extend %img-blur;
+    
+    h2{
+        @extend %h2-image;
+    }
+    
+    p{
+        @extend %p-image;
+    }
+    
+    &:hover{
+        @include transition(0.25s, ease);
+        opacity: 1;
+        transform: scale(1.2);
+        color: $color-blue;
+    }
+}
+
+main{
+    @extend %main;
+}
+
+//about section//
+
+#about-section{
+    @extend %section;
+    
+    h2{
+        @extend %h2;
+    }
+    
+    p{
+        @extend %p;
+    }
+}
+
+.about-section-margin{
+    margin-top: 13em !important;
+}
+
+//offer section//
+
+#offer-section{
+    @extend %section;
+    @include tablet-para-offer;
+    @include desktop-para-offer;
+    
+    h2{
+        @extend %h2;
+    }
+    
+    p{
+        @extend %p;
+    }
+    
+    a{
+        @extend %a-setter;
+        color: $color-black;
+    }
+}
+
+#tax-img{
+    @extend %offer-image;
+    background-image: url("../images/tax1.jpg");
+}
+
+#zus-img{
+    @extend %offer-image;
+    background-image: url("../images/bookkeep2.jpg");
+}
+
+#pit-img{
+    @extend %offer-image;
+    background-image: url("../images/bookkeep3.jpg");
+}
+
+//price section//
+
+#price-section{
+    @extend %section;
+    padding-bottom: 2em;
+    justify-content: space-around;
+    
+    h2{
+        @extend %h2;
+    }
+    
+    p{
+        @extend %p;
+    }
+    
+    a{
+        @extend %a-setter;
+        color: $color-black;
+    }
+}
+
+#price-img-left{
+    @extend %price-image;
+    @include tablet-price;
+    background-image: url("../images/calc.png");
+    
+    p{
+        @extend %p-image;
+    }
+}
+
+#price-img-right{
+    @extend %price-image;
+    @include tablet-price;
+    background-image: url("../images/calc.png");
+    
+     h2{
+        @extend %h2-image;
+    }
+}
+
+//reference section//
+
+#reference-section{
+    @extend %section;
+    @include tablet-para-reference;
+    @include desktop-para-reference;
+    padding-bottom: 0;
+    
+    h2{
+        @extend %h2;
+        padding-bottom: 1em;
+    }
+    
+    p{
+        @extend %p;
+    }
+}
+
+//owl carousel inside reference section//
+
+#reference-wrapper{
+    @include width-height(90%, 30%);
+    @include center;
+    padding: 1.5em 0;
+}
+
+#photo1{
+    @extend %carousel-image;
+    background-image: url("../images/calc.png");
+}
+
+#photo2{
+    @extend %carousel-image;
+    background-image: url("../images/tax1.jpg");
+}
+
+#photo3{
+    @extend %carousel-image;
+    background-image: url("../images/tax2.jpg");
+}
+
+#photo4{
+    @extend %carousel-image;
+    background-image: url("../images/bookeep1.jpg");
+}
+
+#photo5{
+    @extend %carousel-image;
+    background-image: url("../images/bookkeep2.jpg");
+}
+
+#photo6{
+    @extend %carousel-image;
+    background-image: url("../images/bookkeep3.jpg");    
+}

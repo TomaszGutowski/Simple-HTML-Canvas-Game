@@ -1,0 +1,65 @@
+//oferta site content//
+
+main{
+    @extend %main;
+    
+    #h2{
+        width: 100%;
+        text-align: center;
+        padding: 1.5em 0.5em 0 0.5em;
+    }
+}
+
+.offer-div{
+    @include center;
+    @include cell-offer-div;
+    @include tablet-offer-div;
+    padding: 1.5em 0 1em 0;
+}
+
+.offer-span{
+    display: block;
+    padding: 1em 1em 0 1em;
+}
+
+#offer-tax{
+    @extend %section;
+    
+    h2{
+        @extend %h2-offer;
+    }
+    
+    p{
+        @extend %p-offer;
+    }
+    
+    #end{
+        display: inline-block;
+        padding-top: 1.5em;
+    }
+}
+
+#offer-zus{
+    @extend %section;
+    
+    h2{
+        @extend %h2-offer;
+    }
+    
+    p{
+        @extend %p-offer;
+    }
+}
+
+#offer-kadry{
+    @extend %section;
+    padding-bottom: 3em;
+    
+    h2{
+        @extend %h2-offer;
+    }
+    
+    p{
+        @extend %p-offer;
+    }
+}
